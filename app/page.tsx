@@ -2,6 +2,7 @@
 
 import { useExitIntent } from "@/hooks/useExitIntent";
 import ExitIntentModal from "@/components/ui/ExitIntentModal";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Script from "next/script";
 
 import { useEffect, useState } from 'react'
@@ -164,7 +165,7 @@ export default function Page() {
         ========================================================= */}
         {/* Top Left Circle */}
         <div className="fixed -left-32 -top-32 z-0 size-96 rounded-full bg-cyan-400/20 pointer-events-none" />
-        
+
         {/* Bottom Right Circle */}
         <div className="fixed -bottom-32 -right-32 z-0 size-96 rounded-full bg-cyan-400/20 pointer-events-none" />
 
@@ -197,18 +198,24 @@ export default function Page() {
         </nav>
 
         {/* =========================================================
-            HERO
-        ========================================================= */}
-        <section className="relative mx-auto flex min-h-[60vh] max-w-[1600px] items-center px-4 md:px-34  py-16 md:py-8">
+                HERO
+            ========================================================= */}
+        <section className="relative mx-auto flex min-h-[60vh] max-w-[1600px] items-center px-4 pb-16 pt-20 md:px-34 md:pb-8 md:pt-24">
 
+          {/* Background Glow */}
           <div className="pointer-events-none absolute -right-32 top-24 size-96 rounded-full bg-accent/50 blur-3xl" />
 
-          <div className=" relative z-10 grid w-full items-center gap-20 lg:grid-cols-2 lg:gap-10 xl:gap-12">
+          <div className="relative z-10 grid w-full items-center gap-25 lg:grid-cols-2 lg:gap-20 xl:gap-24">
 
-            {/* LEFT — 50% */}
-            <div className="pl-0 text-center lg:text-left lg:pl-4">
+            {/* =========================================================
+        LEFT — HERO CONTENT
+    ========================================================= */}
+
+            <div className="pl-0 text-center lg:pl-4 lg:text-left">
+
               <Reveal>
-                <h1 className="mx-auto max-w-2xl text-5xl font-black leading-[1.05] tracking-[-0.04em] text-[#0B1F3A] drop-shadow-[1px_2px_1px_rgba(0,0,0,0.45)] sm:text-4xl md:text-5xl lg:text-[clamp(3.5rem,4.5vw,5rem)] lg:leading-[0.98]">
+                <h1 className="mx-auto max-w-2xl text-5xl font-black leading-[1.05] tracking-[-0.04em] text-[#0B1F3A] sm:text-4xl md:text-5xl lg:text-[clamp(3.5rem,4.5vw,5rem)] lg:leading-[0.98]">
+
                   <span className="mr-[0.15em] inline-block sm:mr-[0.25em]">
                     <span className="text-[1.06em]">G</span>et
                   </span>
@@ -217,11 +224,11 @@ export default function Page() {
                     <span className="text-[1.06em]">Y</span>our
                   </span>
 
-                  <span className="mr-[0.15em] inline-block text-primary sm:mr-[0.25em]">
+                  <span className="mr-[0.15em] inline-block text-primary-text sm:mr-[0.25em]">
                     <span className="text-[1.06em]">B</span>usiness
                   </span>
 
-                  <span className="inline-block text-primary">
+                  <span className="inline-block text-primary-text">
                     <span className="text-[1.06em]">O</span>nline
                   </span>
 
@@ -241,55 +248,83 @@ export default function Page() {
 
                   <br />
 
-                  <span className="mr-[0.15em] inline-block text-primary sm:mr-[0.25em]">
+                  <span className="mr-[0.15em] inline-block text-primary-text sm:mr-[0.25em]">
                     <span className="text-[1.06em]">W</span>eb
                   </span>
 
-                  <span className="inline-block text-primary">
+                  <span className="inline-block text-primary-text">
                     <span className="text-[1.06em]">P</span>resence
                   </span>
+
                 </h1>
               </Reveal>
 
+
+              {/* =======================================================
+          SUBTEXT + CTA
+      ======================================================= */}
+
               <Reveal className="mt-4 sm:mt-6">
+
                 <p className="flex flex-wrap items-center justify-center gap-y-1.5 text-sm font-medium text-[#0B1F3A]/70 sm:gap-y-2 sm:text-base lg:justify-start lg:text-lg">
+
                   <span>Websites</span>
-                  <span className="px-1.5 text-primary sm:px-2">·</span>
+
+                  <span className="px-1.5 text-primary sm:px-2">
+                    ·
+                  </span>
+
                   <span>Smart Features</span>
-                  <span className="px-1.5 text-primary sm:px-2">·</span>
+
+                  <span className="px-1.5 text-primary sm:px-2">
+                    ·
+                  </span>
+
                   <span>Ongoing Support</span>
+
                 </p>
+
 
                 <a
                   href="#contact"
                   className="group mt-4 inline-flex max-w-full items-center gap-2 rounded-full bg-primary px-4 py-3 text-xs font-bold text-primary-foreground shadow-xl shadow-primary/20 transition-all hover:-translate-y-1 hover:shadow-2xl sm:mt-5 sm:gap-3 sm:px-5 sm:py-3.5 sm:text-sm lg:px-6 lg:py-4 lg:text-base"
                 >
+
                   Get your FREE business audit right now
 
                   <ArrowRight className="size-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1 sm:size-5" />
+
                 </a>
+
               </Reveal>
+
             </div>
 
-            {/* RIGHT — 50% */}
-            <div className=" flex w-full justify-center lg:justify-end">
-              <img
-                src="/hero.png"
-                alt="Hero illustration"
-                className="h-auto w-full max-w-90 object-contain  md:max-w-md lg:max-w-xl xl:max-w-2xl 2xl:max-w-130"
-              />
-            </div>
 
+            {/* =========================================================
+        RIGHT — HERO IMAGE
+    ========================================================= */}
+
+            <div className="relative flex w-full justify-center lg:justify-end">
+              <div className="w-full max-w-3xl scale-155 lg:scale-200">
+                <DotLottieReact
+                  src="https://lottie.host/ba30c20f-f73b-4efc-a4ea-5020e198ca4b/uqfdJDiCqV.lottie"
+                  loop
+                  autoplay
+                  className="w-full"
+                />
+              </div>
+            </div>
           </div>
+
         </section>
 
 
-
         {/* =========================================================
-    PROBLEMS
-========================================================= */}
+                PROBLEMS
+            ========================================================= */}
 
-        <section className="overflow-hidden py-16 sm:py-20 lg:py-24">
+        <section className="overflow-hidden py-16 sm:py-20 lg:py-24 pb-0">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
 
             {/* SECTION INTRO */}
@@ -949,11 +984,11 @@ export default function Page() {
         {/* =========================================================
             TESTIMONIALS
         ========================================================= */}
-        <section className="bg-muted py-16 sm:py-20 lg:py-28">
+        <section className="bg-secondary py-16 sm:py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
             <Reveal>
-              <p className="max-w-2xl text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
+              <p className="max-w-2xl text-white text-3xl tracking-tight sm:text-4xl md:text-5xl">
                 This is what our <span className="text-primary">previous clients</span> say about us.
               </p>
             </Reveal>
