@@ -224,11 +224,11 @@ export default function Page() {
                     <span className="text-[1.06em]">Y</span>our
                   </span>
 
-                  <span className="mr-[0.15em] inline-block text-primary-text sm:mr-[0.25em]">
+                  <span className="mr-[0.15em] inline-block text-primary sm:mr-[0.25em]">
                     <span className="text-[1.06em]">B</span>usiness
                   </span>
 
-                  <span className="inline-block text-primary-text">
+                  <span className="inline-block text-primary">
                     <span className="text-[1.06em]">O</span>nline
                   </span>
 
@@ -248,11 +248,11 @@ export default function Page() {
 
                   <br />
 
-                  <span className="mr-[0.15em] inline-block text-primary-text sm:mr-[0.25em]">
+                  <span className="mr-[0.15em] inline-block text-primary sm:mr-[0.25em]">
                     <span className="text-[1.06em]">W</span>eb
                   </span>
 
-                  <span className="inline-block text-primary-text">
+                  <span className="inline-block text-primary">
                     <span className="text-[1.06em]">P</span>resence
                   </span>
 
