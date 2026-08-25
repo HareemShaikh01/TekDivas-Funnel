@@ -5,15 +5,42 @@ import './globals.css'
 
 
 export const metadata: Metadata = {
-  title: 'TekDivas — Complete Digital Branding for Growing Businesses',
+  title: 'Web Development & Website Design for Growing Businesses | TekDivas',
+
   description:
-    'TekDivas builds complete digital branding for growing businesses, combining professional websites, SEO, and ongoing support to create a strong online presence that attracts and converts customers.',
+    'TekDivas builds professional websites for growing businesses, with SEO setup and ongoing support to help you build a stronger online presence.',
+
   generator: 'TekDivas',
+
   icons: {
     icon: '/iconn.png',
   },
-}
 
+  openGraph: {
+    title: 'Web Development & Website Design for Growing Businesses | TekDivas',
+
+    description:
+      'Professional websites, SEO setup, and ongoing support for growing businesses.',
+
+    url: 'https://YOUR-DOMAIN.com',
+
+    siteName: 'TekDivas',
+
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'TekDivas — Web Development & Website Design',
+      },
+    ],
+
+    locale: 'en_GB',
+    type: 'website',
+  },
+
+
+}
 
 export const viewport: Viewport = {
   colorScheme: 'light',
