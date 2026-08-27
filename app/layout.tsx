@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
+import { OrganizationSchema } from '@/components/ui/organization-schema'
 import './globals.css'
 
 
@@ -56,6 +57,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         {children}
+        <OrganizationSchema />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
       <GoogleAnalytics gaId="G-225HM6RR47" />

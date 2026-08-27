@@ -4,6 +4,7 @@ import { useExitIntent } from "@/hooks/useExitIntent";
 import ExitIntentModal from "@/components/ui/ExitIntentModal";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Script from "next/script";
+import Image from "next/image";
 
 import { useEffect, useState } from 'react'
 import {
@@ -105,9 +106,12 @@ function Logo() {
       className="group flex items-center"
       aria-label="TekDivas home"
     >
-      <img
+      <Image
         src="/logo (1)-Photoroom.png"
         alt="TekDivas"
+        loading="eager"
+        width={500}
+        height={150}
         className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-12"
       />
     </a>
@@ -371,9 +375,11 @@ export default function Page() {
                         ))}
                       </div>
 
-                      <img
+                      <Image
                         src="/problem1.png"
                         alt="Person representing customers who cannot find your business"
+                        width={500}
+                        height={500}
                         className="absolute bottom-0 left-1/2 z-10 h-48 w-auto max-w-[95%] -translate-x-1/2 object-contain transition-transform duration-500 group-hover:scale-[1.04] sm:h-55 md:h-60"
                       />
                     </div>
@@ -481,9 +487,11 @@ export default function Page() {
                         ))}
                       </div>
 
-                      <img
+                      <Image
                         src="/problem2.png"
                         alt="Person representing customers who do not know who to trust"
+                        width={500}
+                        height={500}
                         className="absolute bottom-0 left-1/2 z-10 h-48 w-auto max-w-[95%] -translate-x-1/2 object-contain transition-transform duration-500 group-hover:scale-[1.04] sm:h-55 md:h-60"
                       />
                     </div>
@@ -591,9 +599,11 @@ export default function Page() {
                         ))}
                       </div>
 
-                      <img
+                      <Image
                         src="/problem3.png"
                         alt="Person representing customers choosing another business"
+                        width={500}
+                        height={500}
                         className="absolute bottom-0 left-1/2 z-10 h-48 w-auto max-w-[95%] -translate-x-1/2 object-contain transition-transform duration-500 group-hover:scale-[1.04] sm:h-55 md:h-60"
                       />
                     </div>
@@ -638,9 +648,11 @@ export default function Page() {
                         ))}
                       </div>
 
-                      <img
+                      <Image
                         src="/problem1.png"
                         alt="Person representing customers who cannot find your business"
+                        width={500}
+                        height={500}
                         className="absolute bottom-0 left-1/2 z-10 h-48 w-auto max-w-[95%] -translate-x-1/2 object-contain sm:h-55 md:h-60"
                       />
                     </div>
@@ -675,9 +687,11 @@ export default function Page() {
                         ))}
                       </div>
 
-                      <img
+                      <Image
                         src="/problem2.png"
                         alt="Person representing customers who do not know who to trust"
+                        width={500}
+                        height={500}
                         className="absolute bottom-0 left-1/2 z-10 h-48 w-auto max-w-[95%] -translate-x-1/2 object-contain sm:h-55 md:h-60"
                       />
                     </div>
@@ -712,9 +726,11 @@ export default function Page() {
                         ))}
                       </div>
 
-                      <img
+                      <Image
                         src="/problem3.png"
                         alt="Person representing customers choosing another business"
+                        width={500}
+                        height={500}
                         className="absolute bottom-0 left-1/2 z-10 h-48 w-auto max-w-[95%] -translate-x-1/2 object-contain sm:h-55 md:h-60"
                       />
                     </div>
@@ -1360,7 +1376,7 @@ export default function Page() {
                 <div className="w-full max-w-[320px] overflow-hidden rounded-3xl bg-white shadow-2xl sm:max-w-sm md:max-w-md lg:max-w-xs xl:max-w-130">
 
                   <div
-                    className="calendly-inline-widget w-full overflow-hidden"
+                    className="calendly-inline-widget w-full overflow-hidden min-w-70 h-120 "
                     data-url="https://calendly.com/tekdivas4/30min?text_color=020621&primary_color=02cfd6"
                     style={{
                       minWidth: "280px",

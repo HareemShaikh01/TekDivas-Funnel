@@ -1,0 +1,14 @@
+# TekDivas
+
+> TekDivas builds complete digital branding for growing businesses — custom websites, smart features, and ongoing support that turn visitors into customers.
+
+## About
+TekDivas is a web/software development studio serving local service businesses and non-technical business owners. Services include website development, custom software, and AI agent integration.
+
+## Services
+- Website Development
+- Custom Software
+- AI Agent Services
+
+## Contact
+- Website: https://tek-divas-funnel.vercel.app
