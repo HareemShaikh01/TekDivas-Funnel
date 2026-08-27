@@ -6,6 +6,8 @@ import './globals.css'
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://tek-divas-funnel.vercel.app'),
+
   title: 'Web Development & Website Design for Growing Businesses | TekDivas',
 
   description:
@@ -18,13 +20,13 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+
     title: 'Web Development & Website Design for Growing Businesses | TekDivas',
 
     description:
       'Professional websites, SEO setup, and ongoing support for growing businesses.',
 
-    url: 'https://YOUR-DOMAIN.com',
-
+    url: 'https://tek-divas-funnel.vercel.app',
     siteName: 'TekDivas',
 
     images: [
