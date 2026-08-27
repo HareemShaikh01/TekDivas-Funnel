@@ -72,20 +72,28 @@ const offer = [
 
 const faqs = [
   [
-    'I do not know what I need.',
-    'That is exactly where we start. We will ask the right questions, make clear recommendations, and handle the technical decisions for you.',
+    'How much does a business website cost?',
+    'Pricing depends on what your business needs, but most small business websites with TekDivas fall into a clear, fixed package instead of vague hourly billing. Book a free call and we\'ll give you an exact quote with no pressure.',
   ],
   [
-    'How much does it cost?',
-    'Every business is different, so we shape the package around your goals and needs. Book a quick call and we will give you a clear, no-pressure plan.',
+    'How long does it take to build a website?',
+    'Most TekDivas websites go from first call to fully live in 1 to 3 weeks, depending on complexity. We keep you updated at every stage so there are no surprises.',
   ],
   [
-    'How long does it take?',
-    'Most launches move from first call to a polished website in a few weeks. We keep the process focused, simple, and collaborative.',
+    'I don\'t know what I need for my business — can you help me figure it out?',
+    'Yes. Most clients start exactly here. We ask the right questions about your business and customers, then recommend the right mix of website, features, and support. You don\'t need any technical knowledge to get started.',
   ],
   [
-    'What if I need changes later?',
-    'You will never be left on your own. Ongoing support means we can keep your site current as your business grows.',
+    'Do you offer ongoing support after the website is live?',
+    'Yes. Every TekDivas website includes ongoing support after launch, so you can request updates, fixes, or changes anytime as your business grows, instead of being left on your own.',
+  ],
+  [
+    'Will my website work well on mobile phones?',
+    'Yes. Every website we build is fully responsive, meaning it automatically adapts to look and function properly on phones, tablets, and desktops.',
+  ],
+  [
+    'Do you also help with SEO, or just web design?',
+    'We handle both. Every website includes core SEO setup — like proper page structure, fast loading speed, and search-friendly technical foundations — so your site is built to be found on Google from day one, not just to look good.',
   ],
 ]
 
@@ -120,6 +128,7 @@ function Logo() {
 
 export default function Page() {
   const { show, close } = useExitIntent({ delay: 5000 });
+  const [openFAQ, setOpenFAQ] = useState<number | null>(0)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -1274,6 +1283,77 @@ export default function Page() {
                 ))}
 
               </div>
+            </div>
+
+          </div>
+        </section>
+
+
+                {/* =========================================================
+            FAQ
+        ========================================================= */}
+        <section id="faq" className="overflow-hidden py-16 sm:py-20 lg:py-28">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
+            <Reveal className="mx-auto max-w-2xl text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary sm:text-sm sm:tracking-[0.22em]">
+                Questions? Answered.
+              </p>
+
+              <h2 className="mt-3 text-3xl font-black leading-[1.05] tracking-[-0.04em] text-[#0B1F3A] sm:text-4xl md:text-5xl">
+                Frequently Asked
+                <span className="block text-primary">Questions.</span>
+              </h2>
+
+              <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[#0B1F3A]/65 sm:mt-5 sm:text-lg">
+                Still unsure about something? Here&apos;s what most people ask before we get started.
+              </p>
+            </Reveal>
+
+            <div className="mx-auto mt-10 space-y-3 sm:mt-12 sm:space-y-4">
+              {faqs.map(([question, answer], index) => {
+                const isOpen = openFAQ === index
+
+                return (
+                  <Reveal key={question}>
+                    <div
+                      className={`overflow-hidden rounded-3xl border transition-all duration-300 ${
+                        isOpen
+                          ? "border-primary/30 bg-white shadow-[0_14px_35px_rgba(11,31,58,0.10)]"
+                          : "border-[#0B1F3A]/8 bg-white shadow-[0_10px_32px_rgba(11,31,58,0.06)]"
+                      }`}
+                    >
+                      <button
+                        onClick={() => setOpenFAQ(isOpen ? null : index)}
+                        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left sm:px-6 sm:py-5"
+                        aria-expanded={isOpen}
+                      >
+                        <span className="text-sm font-bold text-[#0B1F3A] sm:text-base lg:text-lg">
+                          {question}
+                        </span>
+
+                        <ChevronDown
+                          className={`size-4 shrink-0 text-primary transition-transform duration-300 sm:size-5 ${
+                            isOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      <div
+                        className={`grid transition-all duration-300 ease-in-out ${
+                          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <p className="px-5 pb-5 text-sm leading-6 text-[#0B1F3A]/65 sm:px-6 sm:pb-6 sm:text-base sm:leading-7">
+                            {answer}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Reveal>
+                )
+              })}
             </div>
 
           </div>
